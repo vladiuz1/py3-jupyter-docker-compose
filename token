@@ -1,0 +1,10 @@
+#!/usr/bin/env python3
+
+import hashlib
+import argparse
+import sys
+
+token = str(input('token: '))
+token_sha1 = hashlib.sha1(token.encode('utf-8')).hexdigest()
+print (f'Use the below line as token argument in your .env:\n\nsha1:{token_sha1}')
+
