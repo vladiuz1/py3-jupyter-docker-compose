@@ -3,6 +3,36 @@
 This repo contains a easy-to configure jupyter notebook that runs from a `docker-compose`. Its useful when you have a
 bunch of docker-compose services running, and you want to easily interact with their APIs via python jupyter-notebook.
 
+
+## Run
+
+All you need to do is use the regulare docker-compose command:
+
+```
+docker-compose up -d
+```
+
+## Stop
+
+```
+docker-compose down
+
+```
+
+## Access
+
+This is the default location of the notebook:
+
+```
+http://127.0.0.1:8888/
+```
+
+The defualt password is `changeme`
+
+In order to make the container publicly available, edit `docker-compose.yaml` and replace `- "127.0.0.1:8888:8888"` 
+with `- "8888:8888"`. Remember, changing the port and host inside `jupyter-config.json` will only change the settings
+inside the container, and likely to break the notebook.
+
 ##  Configure
 
 The config files are located in `./config` folder, edit the `jupyter-config.json` for customization.
@@ -37,31 +67,3 @@ as absolute paths in `./config/jupyter-config.json` starting with ``:
   }
 }
 ```
-
-## Run
-
-All you need to do is use the regulare docker-compose command:
-
-```
-docker-compose up -d
-```
-
-## Stop
-
-```
-docker-compose down
-
-```
-
-## Access
-
-This is the default location of the notebook:
-
-```
-http://127.0.0.1:8888/
-```
-
-
-In order to make the container publicly available, edit `docker-compose.yaml` and replace `- "127.0.0.1:8888:8888"` 
-with `- "8888:8888"`. Remember, changing the port and host inside jupyter-config.json will only change the settings
-inside the container, and likely to break the notebook.
