@@ -55,7 +55,7 @@ Use the output of the command to set the `NotebookApp.password` key.
 ### ssl
 
 If you choose to set ssl certificates, place them in the `./config` folder and state the location of the files
-as absolute paths in `./config/jupyter-config.json` starting with ``:
+as absolute paths in `./config/jupyter-config.json` starting with `/home/jovyan/work`:
 
 ```json
 {
