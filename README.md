@@ -67,3 +67,7 @@ as absolute paths in `./config/jupyter-config.json` starting with `/home/jovyan/
   }
 }
 ```
+
+### Infrastructure model
+
+![Infrastructure model](.infragenie/infrastructure_model.png)
